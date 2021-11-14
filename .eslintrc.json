@@ -14,6 +14,7 @@
         ],
         "createDefaultProgram": true
       },
+      "plugins": ["simple-import-sort"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
@@ -21,6 +22,10 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
+        // Import
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+
         "@angular-eslint/directive-selector": [
           "warn",
           {
