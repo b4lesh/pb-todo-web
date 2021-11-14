@@ -14,7 +14,9 @@
         ],
         "createDefaultProgram": true
       },
-      "plugins": ["simple-import-sort"],
+      "plugins": [
+        "simple-import-sort"
+      ],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
@@ -25,7 +27,6 @@
         // Import
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
-
         "@angular-eslint/directive-selector": [
           "warn",
           {
@@ -61,7 +62,10 @@
         "default-case": "warn",
         "default-case-last": "warn",
         "default-param-last": "warn",
-        "dot-location": ["warn", "property"],
+        "dot-location": [
+          "warn",
+          "property"
+        ],
         "dot-notation": "warn",
         "eqeqeq": "warn",
         "max-classes-per-file": "warn",
@@ -79,7 +83,9 @@
         "no-empty-function": [
           "warn",
           {
-            "allow": ["constructors"]
+            "allow": [
+              "constructors"
+            ]
           }
         ],
         "no-eval": "warn",
@@ -144,7 +150,10 @@
         "prefer-object-spread": "warn",
         "spaced-comment": "warn",
         // ECMAScript 6
-        "quotes": ["warn", "single"],
+        "quotes": [
+          "warn",
+          "single"
+        ],
         "no-useless-computed-key": "warn",
         "no-useless-rename": "warn",
         "no-var": "warn",
@@ -162,9 +171,11 @@
             "default": "array-simple"
           }
         ],
-        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/ban-tslint-comment": "warn",
-        "@typescript-eslint/class-literal-property-style": ["warn", "fields"],
+        "@typescript-eslint/class-literal-property-style": [
+          "warn",
+          "fields"
+        ],
         "@typescript-eslint/consistent-indexed-object-style": "warn",
         "@typescript-eslint/consistent-type-assertions": [
           "warn",
@@ -180,16 +191,18 @@
             "prefer": "type-imports"
           }
         ],
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-member-accessibility": "off",
-        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "@typescript-eslint/explicit-member-accessibility": "warn",
         "@typescript-eslint/member-ordering": "warn",
         "@typescript-eslint/method-signature-style": "warn",
         "@typescript-eslint/naming-convention": [
           "warn",
           {
             "selector": "enumMember",
-            "format": ["PascalCase", "UPPER_CASE"],
+            "format": [
+              "PascalCase",
+              "UPPER_CASE"
+            ],
             "leadingUnderscore": "forbid",
             "trailingUnderscore": "forbid"
           }
@@ -239,7 +252,7 @@
             "variableDeclarationIgnoreFunction": true
           }
         ],
-        "@typescript-eslint/unified-signatures": "off",
+        "@typescript-eslint/unified-signatures": "warn",
         // Extension Rules
         "@typescript-eslint/default-param-last": "warn",
         "@typescript-eslint/no-dupe-class-members": "warn",
