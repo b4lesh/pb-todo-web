@@ -1,0 +1,26 @@
+.todo-list {
+  width: 100%;
+  max-width: 720px;
+  @media (min-width: 767.98px) {
+    margin-top: 144px;
+  }
+}
+
+.title-container {
+  font-family: 'LatoWebBlack', serif;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  color: var(--bs-gray-800);
+}
+
+.input-container {
+  .date {
+    font-family: 'LatoWebBlack', serif;
+    color: var(--bs-gray-800);
+  }
+
+  .input-field-container {
+    height: 80px;
+    background: white;
+  }
+}
