@@ -1,3 +1,5 @@
+@import 'src/scss/helper';
+
 .todo-list {
   width: 100%;
   max-width: 720px;
@@ -5,42 +7,64 @@
     margin-top: 144px;
   }
 }
-
 .title-container {
   font-family: 'LatoWebBlack', serif;
   letter-spacing: 0.25em;
   font-weight: 700;
   color: var(--bs-gray-800);
 }
-
-.date {
+.date-container {
   font-family: 'LatoWebBlack', serif;
   color: var(--bs-gray-800);
 }
-
-.input-field-container {
+.todo-list-container {
+  margin-top: 40px;
+}
+.todo-container {
+  display: flex;
+  align-items: center;
   height: 84px;
   padding-inline: 32px;
+  &.list {
+    border-bottom: 1px solid var(--bs-gray-300);
+  }
+  &.filter {
+    height: 64px;
+    font-size: 14px;
+    color: var(--bs-gray-400);
 
+    span {
+      cursor: pointer;
+      &:hover {
+        color: $perano;
+      }
+      &.active {
+        color: $perano;
+      }
+    }
+
+    .filter-container > span {
+      padding-right: 8px;
+    }
+  }
   .inline-input {
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
-
     &::placeholder {
       color: var(--bs-gray-400);
     }
   }
-
   .cross {
     width: 24px;
     height: 24px;
-    transform: rotate(45deg);
-
+    cursor: pointer;
     &:hover {
-      cursor: pointer;
       filter: contrast(0.5);
+    }
+    &.rotate {
+      transform: rotate(45deg);
     }
   }
 }
