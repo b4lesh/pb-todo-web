@@ -13,14 +13,34 @@
   color: var(--bs-gray-800);
 }
 
-.input-container {
-  .date {
-    font-family: 'LatoWebBlack', serif;
-    color: var(--bs-gray-800);
+.date {
+  font-family: 'LatoWebBlack', serif;
+  color: var(--bs-gray-800);
+}
+
+.input-field-container {
+  height: 84px;
+  padding-inline: 32px;
+
+  .inline-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: var(--bs-gray-400);
+    }
   }
 
-  .input-field-container {
-    height: 80px;
-    background: white;
+  .cross {
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg);
+
+    &:hover {
+      cursor: pointer;
+      filter: contrast(0.5);
+    }
   }
 }
