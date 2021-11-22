@@ -32,15 +32,27 @@ export class TodoService {
     mockTodoList
   );
 
-  public getTodoList(): Observable<Todo[]> {
+  public get(): Observable<Todo[]> {
+    this.mockTodoList$.next(mockTodoList);
     return this.mockTodoList$.asObservable();
   }
 
-  public async pathTodo(id: number, path: TodoPath): Promise<void> {
+  public async path(id: number, path: TodoPath): Promise<void> {
     return new Promise((resolve) => {
       for (const [i, todo] of mockTodoList.entries()) {
         if (todo.id === id) {
           mockTodoList[i] = { ...todo, ...path };
+          resolve();
+        }
+      }
+    });
+  }
+
+  public async delete(id: number): Promise<void> {
+    return new Promise((resolve) => {
+      for (const [i, todo] of mockTodoList.entries()) {
+        if (todo.id === id) {
+          mockTodoList.splice(i, 1);
           resolve();
         }
       }
